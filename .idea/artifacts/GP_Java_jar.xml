@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GP_Java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GP_Java_jar</output-path>
+    <root id="archive" name="GP_Java.jar">
+      <element id="module-output" name="GP_Java" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/sf/py4j/py4j/0.10.9.9/py4j-0.10.9.9.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
