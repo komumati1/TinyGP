@@ -409,11 +409,11 @@ public class TinyGP {
 
     double fitness_function_simp_con_iter(char [] prog, EvaluationContext ctx) {
         double result, actual, fit = 0.0;
-        simplify_con(prog, ctx);
+        this.simplify_con(prog, ctx);
         double[] stack = new double[ctx.length];
         for (int i = 0; i < fitnesscases; ++i ) {
             System.arraycopy(targets[i], 0, ctx.variables, 0, varnumber);
-            result = run_iter_con(stack, ctx);
+            result = TinyGP.run_iter_con(stack, ctx);
             actual = targets[i][varnumber];
             fit += Math.abs(result - actual);
         }
@@ -766,7 +766,7 @@ public class TinyGP {
                 sec = sec % 60;
                 System.out.println("Took: " + min + "min " + sec + "s");
                 System.out.print("PROBLEM SOLVED\n");
-                executor.shutdown();
+//                executor.shutdown();
                 return;
             }
 
@@ -829,7 +829,7 @@ public class TinyGP {
             stats( fitness, population, gen );
         }
         System.out.print("PROBLEM *NOT* SOLVED\n");
-        executor.shutdown();
+//        executor.shutdown();
     }
 
     public void TinyGP() {
